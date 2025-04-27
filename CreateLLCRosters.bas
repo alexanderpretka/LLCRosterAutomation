@@ -674,7 +674,7 @@ End If
 ' Apply filter for "LLC_Millennium_Scholars_Roster.xlsx" file
 If fileNames(i) = "LLC_Millennium_Scholars_Roster.xlsx" Then
     ' Apply the filter to column D with the specified criteria for Biome
-    newWorksheet.Range("D1:D" & lastRow).AutoFilter Field:=1, Criteria1:="=*FY MILLENNIUM*", Operator:=xlOr, Criteria2:="=*UC MILLENNIUM (SIMMONS)*"
+    newWorksheet.Range("D1:D" & lastRow).AutoFilter Field:=1, Criteria1:="=*FY MILLENNIUM*", Operator:=xlOr, Criteria2:="=*XUC MILLENNIUM (ATHERTON)*"
      
     ' Store rows to be deleted
     Dim rowsToDeleteMILL As Range
