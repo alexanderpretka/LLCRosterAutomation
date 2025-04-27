@@ -4,6 +4,6 @@ For one of my projects during my Graduate Assistantship with Residence Life, I h
 
 With this macro, the same task now takes just 10 minutes which has a 94.4% decrease in processing time for Penn State Residence Life faculty members. This innovation not only saved time but also improved collaboration across faculty associates and student leaders associated with the Penn State Residence Life LLCs.
 
-Penn State Residence Life faculty members can use this private Kaltura video link to learn how to run the macro step-by-step:
+Penn State Residence Life faculty can download the GuideToRunMacro.pdf from this GitHub repository to learn how to run the macro step-by-step.
 
 For any questions, comments, and/or suggestions, please do not hesitate to email me at amp7496@psu.edu.
