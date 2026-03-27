@@ -36,9 +36,9 @@ Sub CreateLLCRosters()
     ' Step 2: Create the list of file names
     fileNames = Array( _
         "LLC_Ally_Roster.xlsx", "LLC_Arts_Architecture_Roster.xlsx", _
-        "LLC_BIOME_Roster.xlsx", "LLC_BASH_Roster.xlsx", "LLC_COMM_Roster.xlsx, "LLC_EMS_Roster.xlsx", _
-        "LLC_EARTH_Roster.xlsx" LLC_ED_EQUITY_Roster.xlsx", "LLC_EHOUSE_Roster.xlsx", _
-        "LLC_FY_Education_Roster.xlsx", LLC_FY_Liberal_Arts_Roster.xlsx", "LLC_FISE_Roster.xlsx", _
+        "LLC_BIOME_Roster.xlsx", "LLC_BASH_Roster.xlsx", "LLC_COMM_Roster.xlsx", "LLC_EMS_Roster.xlsx", _
+        "LLC_EARTH_Roster.xlsx", "LLC_ED_EQUITY_Roster.xlsx", "LLC_EHOUSE_Roster.xlsx", _
+        "LLC_FY_Education_Roster.xlsx", "LLC_FY_Liberal_Arts_Roster.xlsx", "LLC_FISE_Roster.xlsx", _
         "LLC_Forensics_Roster.xlsx", "LLC_Flourish_Roster.xlsx", "LLC_Global_Engagement_Roster.xlsx", _
         "LLC_IST_House_Roster.xlsx", "LLC_ROTC_Roster.xlsx", "LLC_Paterno_Fellows_Roster.xlsx", _
         "LLC_PGM_Roster.xlsx", "LLC_Schreyer_Honors_Housing_Roster.xlsx", "LLC_GLOBE_Roster.xlsx", _
