@@ -35,10 +35,10 @@ Sub CreateLLCRosters()
     
     ' Step 2: Create the list of file names
     fileNames = Array( _
-        "LLC_Ally_Roster.xlsx", "LLC_Ally_Break_Roster.xlsx", "LLC_Arts_Architecture_Roster.xlsx", _
+        "LLC_Ally_Roster.xlsx", "LLC_Arts_Architecture_Roster.xlsx", _
         "LLC_BIOME_Roster.xlsx", "LLC_BASH_Roster.xlsx", "LLC_EMS_Roster.xlsx", "LLC_EARTH_Roster.xlsx", _
         "LLC_ED_EQUITY_Roster.xlsx", "LLC_EHOUSE_Roster.xlsx", "LLC_FY_Education_Roster.xlsx", _
-        "LLC_FY_Liberal_Arts_Roster.xlsx", "LLC_FISE_Roster.xlsx", "LLC_FY_Veterans_Roster.xlsx", _
+        "LLC_FY_Liberal_Arts_Roster.xlsx", "LLC_FISE_Roster.xlsx", _
         "LLC_Forensics_Roster.xlsx", "LLC_Flourish_Roster.xlsx", "LLC_Global_Engagement_Roster.xlsx", _
         "LLC_IST_House_Roster.xlsx", "LLC_ROTC_Roster.xlsx", "LLC_Paterno_Fellows_Roster.xlsx", _
         "LLC_PGM_Roster.xlsx", "LLC_Schreyer_Honors_Housing_Roster.xlsx", "LLC_GLOBE_Roster.xlsx", _
@@ -82,31 +82,6 @@ If fileNames(i) = "LLC_Ally_Roster.xlsx" Then
     ' Delete all the rows at once if there are any to delete
     If Not rowsToDeleteAlly Is Nothing Then
         rowsToDeleteAlly.Delete
-    End If
-End If
-
-' Apply filter for "LLC_Ally_Break_Roster.xlsx" file
-If fileNames(i) = "LLC_Ally_Break_Roster.xlsx" Then
-    ' Apply the filter to column D with the specified criteria for Ally Break
-    newWorksheet.Range("D1:D" & lastRow).AutoFilter Field:=1, Criteria1:="=*FY LLC ALLY BREAK*", Operator:=xlOr, Criteria2:="=*UC LLC ALLY BREAK*"
-    
-    ' Store rows to be deleted
-    Dim rowsToDeleteAllyBreak As Range
-    
-    ' Loop through the rows and add the hidden ones to the delete range for Ally Break
-    For Row = 2 To lastRow ' Assuming row 1 is the header
-        If newWorksheet.Rows(Row).Hidden = True Then
-            If rowsToDeleteAllyBreak Is Nothing Then
-                Set rowsToDeleteAllyBreak = newWorksheet.Rows(Row)
-            Else
-                Set rowsToDeleteAllyBreak = Union(rowsToDeleteAllyBreak, newWorksheet.Rows(Row))
-            End If
-        End If
-    Next Row
-    
-    ' Delete all the rows at once if there are any to delete
-    If Not rowsToDeleteAllyBreak Is Nothing Then
-        rowsToDeleteAllyBreak.Delete
     End If
 End If
 
@@ -364,31 +339,6 @@ If fileNames(i) = "LLC_FISE_Roster.xlsx" Then
     End If
 End If
 
-' Apply filter for "LLC_FY_Veterans_Roster.xlsx" file
-If fileNames(i) = "LLC_FY_Veterans_Roster.xlsx" Then
-    ' Apply the filter to column D with the specified criteria for Arts & Architecture
-    newWorksheet.Range("D1:D" & lastRow).AutoFilter Field:=1, Criteria1:="=*FY LLC VETERAN*"
-    
-    ' Store rows to be deleted
-    Dim rowsToDeleteVET As Range
-    
-    ' Loop through the rows and add the hidden ones to the delete range
-    For Row = 2 To lastRow ' Assuming row 1 is the header
-        If newWorksheet.Rows(Row).Hidden = True Then
-            If rowsToDeleteVET Is Nothing Then
-                Set rowsToDeleteVET = newWorksheet.Rows(Row)
-            Else
-                Set rowsToDeleteVET = Union(rowsToDeleteVET, newWorksheet.Rows(Row))
-            End If
-        End If
-    Next Row
-    
-    ' Delete all the rows at once if there are any to delete
-    If Not rowsToDeleteVET Is Nothing Then
-        rowsToDeleteVET.Delete
-    End If
-End If
-
 ' Apply filter for "LLC_Forensics_Roster.xlsx" file
 If fileNames(i) = "LLC_Forensics_Roster.xlsx" Then
     ' Apply the filter to column D with the specified criteria for Biome
@@ -545,7 +495,7 @@ End If
 ' Apply filter for "LLC_PGM_Roster.xlsx" file
 If fileNames(i) = "LLC_PGM_Roster.xlsx" Then
     ' Apply the filter to column D with the specified criteria for Biome
-    newWorksheet.Range("D1:D" & lastRow).AutoFilter Field:=1, Criteria1:="=*FY LLC PGM*", Operator:=xlOr, Criteria2:="=*UC LLC PGM*"
+    newWorksheet.Range("D1:D" & lastRow).AutoFilter Field:=1, Criteria1:="=*FY LLC PGM*"
     
     ' Store rows to be deleted
     Dim rowsToDeletePGM As Range
@@ -674,7 +624,7 @@ End If
 ' Apply filter for "LLC_Millennium_Scholars_Roster.xlsx" file
 If fileNames(i) = "LLC_Millennium_Scholars_Roster.xlsx" Then
     ' Apply the filter to column D with the specified criteria for Biome
-    newWorksheet.Range("D1:D" & lastRow).AutoFilter Field:=1, Criteria1:="=*FY MILLENNIUM*", Operator:=xlOr, Criteria2:="=*XUC MILLENNIUM (ATHERTON)*"
+    newWorksheet.Range("D1:D" & lastRow).AutoFilter Field:=1, Criteria1:="=*FY LLC MILLENNIUM*", Operator:=xlOr, Criteria2:="=*UC MILLENNIUM (WOLF)*"
      
     ' Store rows to be deleted
     Dim rowsToDeleteMILL As Range
